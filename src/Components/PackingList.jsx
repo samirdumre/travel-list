@@ -30,7 +30,7 @@ function PackagingList({packingItems, onDeletePackingItems, handleTogglePackingI
 
 function Item({item, onDeletePackingItems, handleTogglePackingItem}) {
     return (<li>
-        <input type={"checkbox"} value={item.packed} onChange={() => handleTogglePackingItem(item.id)}/>
+        <input type={"checkbox"} value={item.packed} defaultChecked={item.packed} onChange={() => handleTogglePackingItem(item.id)}/>
         <span style={item.packed ? {textDecoration: 'line-through'} : {}}>
                 {item.quantity} {item.description}
                 </span>
